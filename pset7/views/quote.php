@@ -2,7 +2,8 @@
     // check if user input is a valid stock symbol
     if ($stock = lookup(htmlspecialchars($_POST["symbol"]))) 
     {
-        echo("The current price of {$stock["name"]}({$stock["symbol"]}) is $ {$stock["price"]}");
+        $price = number_format($stock["price"], $decimal = 2);
+        echo("The current price of {$stock["name"]}({$stock["symbol"]}) is \${$price} ");
     }
     
     else
