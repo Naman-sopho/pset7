@@ -7,6 +7,5 @@
                 <span aria-hidden="true" class="glyphicon glyphicon-log-in"></span>
                 Submit
             </button>
-        </input>
     </div>
 </form>
