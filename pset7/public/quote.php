@@ -11,8 +11,6 @@
     // if user is redirected via a POST request
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        // validate the input stock symbol
         render("../views/quote.php", ["title" => htmlspecialchars( strtoupper($_POST["symbol"]))]);
     }
-    
 ?>
