@@ -58,8 +58,8 @@ table {
     
 }
 
-th { 
-    background: darkblue;
+th {
+    background: white;
     color:white;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 25px;
@@ -71,12 +71,13 @@ th {
 tr {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: medium;
-    text-align:center; 
+    text-align: center; 
     border: 1px solid black; 
     border-collapse: collapse;
 }
 
 td {
+    text-align: center;
     padding: 15px; 
     border: 1px solid black; 
     border-collapse: collapse;

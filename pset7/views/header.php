@@ -6,10 +6,10 @@
 
         <!-- http://getbootstrap.com/ -->
         <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/css/styles.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-        <link href="/css/styles.css" rel="stylesheet"/>
 
         <?php if (isset($title)): ?>
             <title>C$50 Finance: <?= htmlspecialchars($title) ?></title>

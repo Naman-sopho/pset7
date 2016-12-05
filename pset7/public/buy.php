@@ -48,6 +48,10 @@
                 // update users cash balance
                 CS50::query("UPDATE users SET cash = cash - ? WHERE id = ?", $spent, $_SESSION["id"]);
                 
+                // insert transaction into history table
+                CS50::query("INSERT INTO history (user_id, symbol, shares, b_or_s, timestamp) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)",
+                $_SESSION["id"], strtoupper($_POST["symbol"]), $_POST["shares"], -$buy["spent"]);
+                
                 // get users cash balance
                 $cash = CS50::query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
                 $buy["cash"] = $cash["0"]["cash"];

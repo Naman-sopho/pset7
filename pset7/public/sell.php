@@ -38,10 +38,16 @@
             $sell["0"]["name"] = $stock["name"];
             $sell["0"]["price"] = $stock["price"];
             
+            // deleting sold stock from users portfolio
             CS50::query("DELETE FROM portfolios WHERE user_id = ? AND symbol = ?", $_SESSION["id"], $_POST["stock_to_sell"]);
             
+            // updating user's cash balance
             $balance = $sell["0"]["price"] * $sell["0"]["shares"];
             CS50::query("UPDATE users SET cash = cash + ? WHERE id = ?", $balance, $_SESSION["id"]);
+            
+            // logging transaction into history
+            CS50::query("INSERT INTO history (user_id, symbol, shares, b_or_s, timestamp) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)",
+            $_SESSION["id"], strtoupper($_POST["stock_to_sell"]), $sell["0"]["shares"], $balance);
             
             $cash = CS50::query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
             $sell["0"]["cash"] = $cash["0"]["cash"];
