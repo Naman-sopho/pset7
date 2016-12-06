@@ -54,4 +54,10 @@
             
             render("../views/sold.php", ["sell" => $sell, "title" => "Sold {$_POST["stock_to_sell"]} stocks"]);
         }
+        
+        else
+        {
+            apologize("Please select a stock to sell. Click <a href = \"buy.php\">here </a>to go back to the 
+            sell stock page.");
+        }
     }

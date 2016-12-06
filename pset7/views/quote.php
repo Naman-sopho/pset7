@@ -9,6 +9,9 @@
     else
     {
         echo("<h1>Sorry!");echo("</h1>");
-        echo("<h4>Please enter a valid Stock symbol.");echo("</h4>");
+        echo("<h4>Please enter a valid Stock symbol.");echo("</h4>");echo("<br>");
+        echo(" Click <a href = \"quote.php\">here </a>to go back to the 
+            request quote page.");
+        
     }
 ?>

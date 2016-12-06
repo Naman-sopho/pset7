@@ -15,14 +15,16 @@
         // validate user input
         if (!preg_match("/^\d+$/", $_POST["shares"]))
         {
-            apologize("Please enter a valid number of stocks");  
+            apologize("Please enter a valid number of stocks. Click <a href = \"buy.php\">here </a>to go back to the 
+            buy stock page.");  
         }
         
         
         // check if user input is a valid stock symbol
         else if (!$stock = lookup("$symbol"))
         {
-            apologize("Please enter a valid stock symbol");
+            apologize("Please enter a valid stock symbol. Click <a href = \"buy.php\">here </a>to go back to the 
+            buy stock page.");
         }
         
         else
