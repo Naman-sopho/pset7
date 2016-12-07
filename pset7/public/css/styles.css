@@ -61,7 +61,8 @@ table {
 th {
     background: blue;
     color:white;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: Monospace;
+    font-weight: bold;
     font-size: 25px;
     padding: 15px; 
     border: 1px solid black; 
@@ -69,7 +70,7 @@ th {
 }
 
 tr {
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: Monospace;
     font-size: medium;
     text-align: center; 
     border: 1px solid black; 
